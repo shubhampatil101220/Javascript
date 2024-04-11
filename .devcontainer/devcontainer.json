@@ -23,7 +23,9 @@
 			"settings": {
 				"editor.fontSize": 32,
 				"terminal.integrated.fontSize": 24,
-				"editor.wordWrap": "on"
+				"editor.wordWrap": "on",
+				"files.autoSave": "onFocusChange" // or "afterDelay", "onWindowChange", or "onWindowChange", "onWindowChange", or "off"
+
 			}
 		}
 	},
