@@ -48,3 +48,35 @@ String(undefined) => "undefined"
 */
 console.log( String(undefined));
 
+//===================Operations===================
+/*
+for operations we use arithmetic operators
+= assignment operator
++ = addition
+- = substraction
+/ = divide
+% = modulous/remainder
+++ = increment operator
+-- = decrement operator
+a++ = postfix increment
+++a = prefix increment
+a-- = postfix decrement
+--a = prefix decrement
+*/
+let str1 = "Hello";
+let str2 = " Shubham";
+console.log(str1+str2);
+
+//Ecmascript standards read the value from left to right  
+console.log(1+2); //3
+console.log("1" +2); //12
+console.log(1+"2"); //12
+console.log("1"+2+2); //122
+console.log(1+2+"2"); //32
+
+console.log(+true); //1 number type
+console.log(+""); //0 number type
+console.log(+null); //0 number type
+console.log(+undefined); //NAN number type
+console.log(+NaN); //NAN number type
+
