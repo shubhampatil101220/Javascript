@@ -33,3 +33,17 @@ console.log(AccountId);
 
 // and
 console.table([AccountId , AccoountEmail , AccountPassword, currentCity,AccountState,interest]);
+
+
+//NOTE: in multiple expression it takes the last value
+let a =("shubham","patil") 
+console.log(a); //patil
+
+let b = (44,45,46);
+console.log(b); //46
+
+let c =(3*3,4-2,15*2);
+console.log(c); //30
+
+let d = (b*c,b-c,c+b);
+console.log(d); //76
