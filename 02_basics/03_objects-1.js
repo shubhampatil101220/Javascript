@@ -1,8 +1,4 @@
 //to declare an objecct there are two ways using literals and constructor
-//constructor way or singelton method
-// Object.create(obUser)
-// console.log(obUser);
-
 
 //literal way
 let JsUser ={
@@ -45,6 +41,9 @@ Object.freeze(JsUser);
  JsUser.fullname="tere naam"; 
 //now it would not change because we freezed the object then object cannot modified
 
+//Object.create() method: This method creates a new object, using an existing object as the prototype of the newly created object.
+let newUser =Object.create(JsUser)
+console.log("Object.create()",newUser);
 
 
 // =====================Functions========================
