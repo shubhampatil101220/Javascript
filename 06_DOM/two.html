@@ -1,0 +1,47 @@
+<!-- //selectors & Parent child in DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    console.log(document.querySelector('.parent')); //accessing the DOM by class name
+    const days = document.querySelector('.parent'); //storing the DOM element in a variable
+    console.log(days.children); //logging the child of parent component
+    console.log(days.children[1]); //accessing the child element by the index
+    console.log(days.children[1].innerHTML); //accessing innercode of that element
+
+    const dayArr=[days.children]
+    console.log(dayArr); //getting the child tags of an html element
+
+    for (let i = 0; i < days.children.length; i++) {
+        console.log(days.children[i].innerHTML);  
+    }//adding loop to get all elements
+    
+
+    days.children[1].style.color ="orange"; //setting style to a child element
+
+     console.log("first-child",days.firstElementChild.innerHTML);
+  console.log("last-child",days.lastElementChild.innerHTML);
+
+    const dayone = document.querySelector('.day');
+    console.log(dayone);
+
+    console.log("parent element",dayone.parentElement); //getting parent element from the child
+    console.log("next sibling",dayone.nextElementSibling); //getting next element of current element from the child
+
+    //to get the all nodes structure of an element
+    console.log(days.childNodes);
+</script>
+</html>
