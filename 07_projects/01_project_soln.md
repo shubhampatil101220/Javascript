@@ -3,6 +3,7 @@
 # Project link
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-rcr3ow?file=1-colorChanger%2Fchaiaurcode.js)
 
+## Project 1 Solution
 ```javascript
 const buttons =document.querySelectorAll('.button');
 const body = document.querySelector('body');
@@ -51,4 +52,44 @@ buttons.forEach(function(button){
     
   });
 })
+```
+## Project 2 Solution
+
+```javascript
+
+const form =document.querySelector('form');
+const result = document.querySelector('#results');
+form.addEventListener('submit', function(event){
+  event.preventDefault()
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = (document.querySelector('#weight').value);
+  console.log(height)
+  console.log(weight)
+  if(!height){
+    result.innerHTML ="please add valid input"
+  }else if(!weight){
+    result.innerHTML ="please add valid input"
+  } else{
+   
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    //show the result
+    result.innerHTML = `<span>${bmi}</span>`;
+  }
+
+
+
+})
+
+```
+## Project 3 Solution
+
+```javascript
+const clock = document.getElementById('clock');
+
+setInterval(function(){
+  const date = new Date().toLocaleTimeString();
+  clock.innerHTML =date;
+  console.log(date)
+},1000)
+
 ```
