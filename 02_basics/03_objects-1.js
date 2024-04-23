@@ -62,3 +62,24 @@ console.log(JsUser2.greeting()); //Hello user
 console.log(JsUser2.greetingTWO()); //hello user shubham
 console.log(JsUser2.greetingThree()); //hello user omkar
 console.log( typeof JsUser2.greeting); //function
+
+
+
+
+// ===============Interview Questions========================
+/*
+how to freeze sepcific field in object to not modify that value
+*/
+let user={
+    id:132,
+    name:"shubham",
+    occupation:"worker"
+  }
+  user.id=500;
+  //Object.freeze(user) this freezes the whole object
+  
+  Object.defineProperties(user,{id:{writable:false}}) //this changes the property of writable
+  
+  user.id=300;
+  
+  console.log(user);
