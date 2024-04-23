@@ -78,8 +78,23 @@ let user={
   user.id=500;
   //Object.freeze(user) this freezes the whole object
   
+  //for multiple field used defineproperties
   Object.defineProperties(user,{id:{writable:false}}) //this changes the property of writable
   
+  //or 
+
+  //for single field used defineproperties
+  Object.defineProperty(user,'name',{writable:false}) //this changes the property of writable
+
   user.id=300;
   
   console.log(user);
+console.log(Object.getOwnPropertyDescriptor(user,"id"));  //defineProperties
+console.log(Object.getOwnPropertyDescriptor(user,"name")); //defineProperty
+
+
+/**
+ *  writable: false, //this stops the changing the value
+ * enumerable: true, //this prevents from the iteration
+ * configurable: true
+ */
